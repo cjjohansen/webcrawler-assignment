@@ -1,0 +1,52 @@
+﻿@model WebCrawler.Web.Mvc.ViewModels.CrawlerSessionViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CrawlerSessionViewModel</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateTime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StartUrl)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StartUrl)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PageCount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PageCount)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SearchDepth)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SearchDepth)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Start Crawl", "StartCrawl", new {id= Model.Id})
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

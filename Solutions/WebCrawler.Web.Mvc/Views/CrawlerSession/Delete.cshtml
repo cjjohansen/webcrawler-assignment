@@ -1,0 +1,54 @@
+﻿@model WebCrawler.Web.Mvc.ViewModels.CrawlerSessionViewModel
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>CrawlerSessionViewModel</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateTime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StartUrl)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StartUrl)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PageCount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PageCount)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SearchDepth)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SearchDepth)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
